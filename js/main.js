@@ -1,23 +1,29 @@
 let pelicula = document.getElementById("peli");
-let genero = document.getElementById("genero");
+let lista = document.getElementById("pelisListas");
 let buttonAgregar = document.getElementById('agregar');
+var texto, elementoPeli;
 
-document.write(genero);
-
-function agregar() {
-    var gustosPeli = {
-        nombre: pelicula.value,
-        tipo: genero.value
+buttonAgregar.addEventListener('click', function() {
+    if (pelicula.value == "") {
+        alert("Debe ingresar algun valor");
     }
+    localStorage.setItem(pelicula.value, pelicula.value);
+    pelicula.value = "";
+});
 
-    localStorage.setItem("Peliculas", JSON.stringify(gustosPeli));
-    var userObject = JSON.parse(localStorage.getItem(gustosPeli));
 
-    var lista = document.getElementById('pelisListas');
-    var elemento = document.createElement("div");
-    elemento.createTextNode(gustosPeli.nombre + " y el genero es " + gustosPeli.tipo);
-    lista.appendChild(elemento);
+for (i in localStorage) {
+    if (typeof localStorage[i] == "string") {
+        elementoPeli = document.createElement("div");
+        elementoPeli.append(localStorage[i]);
+        lista.append(elementoPeli);
+    }
 }
 
-
-buttonAgregar.addEventListener('click', agregar);
+/*for (i in localStorage) {
+    if (typeof localStorage[i] == "string") {
+        elementoPeli.addEventListener('click', function() {
+            localStorage.removeItem(localStorage[i]);
+        });
+    }
+}*/
