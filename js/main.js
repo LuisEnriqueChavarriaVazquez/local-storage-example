@@ -15,10 +15,15 @@ buttonAgregar.addEventListener('click', function() {
 for (i in localStorage) {
     if (typeof localStorage[i] == "string") {
         elementoPeli = document.createElement("div");
+        elementoPeli.className = "elemento";
         elementoPeli.append(localStorage[i]);
         lista.append(elementoPeli);
     }
 }
+
+document.getElementById("eliminar").addEventListener('click', function() {
+    localStorage.clear();
+});
 
 /*for (i in localStorage) {
     if (typeof localStorage[i] == "string") {

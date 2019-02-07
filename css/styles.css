@@ -1,0 +1,72 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: rgb(255, 255, 255);
+}
+
+.title {
+    font-family: "Segoe UI", Arial;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.alignForm {
+    margin: 0px;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background: rgb(175, 175, 175);
+    box-shadow: 0px 2px 10px rgb(85, 85, 85);
+}
+
+.btn,
+.peli {
+    border: none;
+    margin: 2px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all .5s ease;
+    border-radius: 6px;
+    box-shadow: 2px 2px 10px rgb(139, 139, 139);
+}
+
+.btn {
+    background: rgb(4, 47, 82);
+    color: #fff;
+    width: 100px;
+}
+
+.peli {
+    padding: 10px;
+    width: 300px;
+}
+
+.peli:focus {
+    background: #ddd;
+}
+
+.heigher {
+    height: 50px;
+}
+
+.container {
+    padding: 20px;
+    margin: 30px;
+    background: rgb(187, 187, 187);
+    box-shadow: 2px 2px 10px rgb(85, 85, 85);
+    border-radius: 6px;
+}
+
+.elemento {
+    padding: 5px;
+    background: #ddd;
+    box-shadow: 2px 2px 10px rgb(85, 85, 85);
+    border-radius: 4px;
+    margin-bottom: 5px;
+}

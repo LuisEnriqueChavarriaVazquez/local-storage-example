@@ -10,17 +10,21 @@
 </head>
 
 <body>
-    <form action="">
-        <label for="peli">Peliculas</label> &nbsp;
-        <input type="text" name="peli" id="peli" class="peli">
-        <br>
-        <input type="submit" value="Agregar" id="agregar">
-    </form>
+    <section class="alignForm">
+        <div class="heigher">
+            <form action="">
+                <input type="text" name="peli" id="peli" class="peli" placeholder="Add your favourites movies">
+                <input type="submit" value="Add" id="agregar" class="btn">
+                <input type="submit" value="Reset" id="eliminar" class="btn">
+            </form>
+        </div>
+    </section>
 
-    <hr>
-    <div class="pelisListas" id="pelisListas">
-        <div>Elemento</div>
-    </div>
+    <section class="container">
+        <div class="title">Movies</div>
+        <div class="pelisListas" id="pelisListas">
+        </div>
+    </section>
 
     <script src="js/main.js"></script>
 </body>
